@@ -1,0 +1,104 @@
+<h2 class="title">Administration</h2>
+
+<!-- Panel -->
+
+<div class="dialog clearfix isProcess" id="admin-role">
+
+    <div class="tabs">
+        <ul class="tabNav clearfix">
+            <li id="results-tab"><a>Results</a></li>
+            <li id="details-tab"><a>Details</a></li>
+        </ul><!-- /tabNav -->
+        
+<div class="panelContainer clearfix">
+
+<!-- # BO PANEL Admin.Role Results # -->
+    <div id="results" class="tabPanel flex isTask">
+    <div class="tableWrapper">
+    
+        <table class="gridTable">
+            <tr>
+                <td class="col4">
+                    <label>Domain (0)</label>
+                    <div id="domain" class="wrap isSelect"> </div>
+                </td>
+                <td class="col4">
+                    <label>Mandator (0)</label>
+                    <div id="mandator" class="wrap isSelect"></div>
+                </td>
+                <td class="col4">
+                    <label>Role (0)</label>
+                    <div class="wrap">
+                        <input id="rolePattern" />
+                    </div>
+                </td>
+                 <td class="col4"></td>
+            </tr>
+        </table>
+        
+         <table class="gridTable">
+            <tr>
+                <td>
+                    <div id="roles"></div>
+                </td>
+            </tr>
+
+        </table>
+
+
+    </div><!-- /tablewrapper -->
+
+        <div class="tabfooter">
+            <div class="inner">
+                <div class="buttons" id="actions"></div>
+                <div id="servicestatus"></div>
+            </div>
+        </div><!-- /tabfooter -->
+</div><!-- /tabPanel -->
+
+<!-- # EO PANEL Admin.Role Results # -->
+
+<!-- # BO PANEL Admin.Role Details # -->
+    <div id="details" class="tabPanel flex isTask">
+    <div class="tableWrapper">
+    
+        <table class="gridTable">
+            <tr>
+                <td class="col4">
+                    <label>Domain</label>
+                    <div id="domain" class="wrap isSelect"> </div>
+                </td>
+                <td class="col4">
+                    <label>Mandator</label>
+                    <div id="mandator" class="wrap isSelect"></div>
+                </td>
+                <td class="col4">
+                    <label>Role</label>
+                    <div class="wrap">
+                        <input id="role" />
+                    </div>
+                </td>
+                 <td class="col4"></td>
+            </tr>  
+
+        </table>
+        
+        <div id="permissiongroups" class="isSwapSelect"></div>
+
+            
+    </div><!-- /tablewrapper -->
+
+        <div class="tabfooter">
+            <div class="inner">
+                <div class="buttons" id="actions"></div>
+                <div id="servicestatus"></div>
+            </div>
+        </div><!-- /tabfooter -->
+</div><!-- /tabPanel -->
+
+<!-- # EO PANEL Admin.Role Details  # -->
+
+
+</div><!-- /panelContainer -->
+</div><!-- /tabs -->
+</div><!-- /dialog -->

@@ -1,0 +1,24 @@
+package com.deniz.flightinformation.services.actualflight;
+
+import java.util.LinkedHashMap;
+
+import com.deniz.flightinformation.services.FlightInformationLocalizerKeys;
+import com.deniz.framework.controller.ProcessControllerTemplate;
+
+
+public class ActualFlightProcessController extends ProcessControllerTemplate
+{
+
+	@Override
+	public LinkedHashMap<String, Boolean> getLockMap()
+	{
+		LinkedHashMap<String, Boolean> lockMap = new LinkedHashMap<String, Boolean>();
+		lockMap.put( FlightInformationLocalizerKeys.TASK_NAME_OVERVIEW, false );
+		lockMap.put( FlightInformationLocalizerKeys.TASK_NAME_DETAILS, true );
+		lockMap.put( "load", false );
+		lockMap.put( "delays", true );
+		return lockMap;
+	}
+
+
+}

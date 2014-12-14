@@ -1,0 +1,177 @@
+{
+   "type":"process",
+   "id":"scf",
+   "label":"SCF",
+   "mode":"init",
+   "url":"scf/init",
+   "items":[
+      {
+         "id":"overview",
+         "label":"Overview",
+         "selected":true,
+         "type":"task",
+         "mode":"init",
+         "services":[
+            {
+               "id":"finalize",
+               "label":"Finalize",
+               "url":"scf/init",
+               "parameters":[
+                  {
+                     "id":"*"
+                  }
+               ]
+            },
+            {
+               "id":"cancel",
+               "label":"Cancel",
+               "url":"scf/init",
+               "parameters":[
+                  {
+                     "id":"*"
+                  }
+               ]
+            },
+            {
+               "id":"preview",
+			   "external": true,
+               "label":"Preview",
+               "url":"scf/preview/download",
+               "parameters":[
+                  {
+                     "id":"*"
+                  }
+               ]
+            },
+			{
+				"id": "export",
+				"external": true,
+				"label": "Export",
+                "url":"scf/preview/export",
+				"parameters": [
+					{
+						"id": "+"
+					}
+				]
+			}
+         ],
+         "items":[
+            {
+               "type":"time",
+               "id":"date",
+               "label":"Date",
+               "format":"date",
+               "value":"19.04.2013"
+            },
+            {
+				"type":"list",
+				"id":"airportList",
+				"label":"Airport",
+				"format":"text",
+				"items": [
+				    {
+				        "label": "Please Select",
+				        "value": "*"
+				    },
+				    {
+				        "label": "IST",
+				        "value": "IST"
+				    },
+				    {
+				        "label": "AYT",
+				        "value": "AYT"
+				    }
+				]
+            },
+            {
+               "type":"table",
+               "id":"groupsTable",
+               "mode":"init",
+               "checked":"multiple",
+               "columns":[
+                  {
+                     "type":"key",
+                     "hidden":true,
+                     "id":"contentId"
+                  },
+                  {
+                     "type":"text",
+                     "id":"scfNo",
+                     "label":"SCF No"
+                  },
+                  {
+                     "type":"text",
+                     "id":"airport",
+                     "label":"Airport"
+                  },
+                  {
+                     "type":"text",
+                     "id":"airline",
+                     "label":"Airline"
+                  },
+                  {
+                     "type":"text",
+                     "id":"flightNumber",
+                     "label":"Flight Number"
+                  },
+                  {
+                     "type":"text",
+                     "id":"stad",
+                     "label":"STAD"
+                  },
+                  {
+                     "type":"text",
+                     "id":"status",
+                     "label":"Status"
+                  }
+               ],
+               "rows":[
+                  [
+                     "HL0000107.1",
+                     "87612",
+                     "IST",
+                     "DLH",
+                     "1776",
+                     "19.04.2013 15:30",
+                     "Operational"
+                  ],
+                  [
+                     "HL0000107.2",
+                     "12345",
+                     "AYT",
+                     "KLM",
+                     "3148",
+                     "19.04.2013 14:14",
+                     "Finalized"
+                  ]
+               ],
+               "services":[
+                  {
+                     "id":"edit",
+                     "label":"edit",
+                     "trigger":"select",
+                     "url":"scf/edit",
+                     "parameters":[
+                        {
+                           "id":"*"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "type":"task",
+         "id":"details",
+         "label":"Details",
+         "locked":true
+      },
+      {
+         "type":"task",
+         "id":"servizes",
+         "label":"Services",
+         "locked":true
+      }
+   ]
+}

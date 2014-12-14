@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="actualFlightProcessController"
+		class="com.deniz.flightinformation.services.actualflight.ActualFlightProcessController">
+<!-- 		<property name="requestInfoProvider" ref="framework_RequestInfoProvider" /> -->
+		<property name="methodNameResolver" ref="methodNameResolver" />
+		<property name="processId" value="actualFlight" />
+		<property name="taskControllers">
+			<map>
+				<!-- controllerUrl ref to controller spring bean -->
+				<entry key="overview" value-ref="actualFlightOverviewTaskController" />
+				<entry key="details" value-ref="actualFlightDetailsTaskController" />
+				<entry key="load" value-ref="actualFlightLoadTaskController" />
+				<entry key="delays" value-ref="actualFlightDelaysTaskController" />
+			</map>
+		</property>
+	</bean>
+
+
+	<bean id="actualFlightOverviewTaskController"
+		class="com.deniz.flightinformation.services.actualflight.tasks.ActualFlightOverviewTaskController">
+		<property name="methodNameResolver" ref="methodNameResolver" />
+		<property name="processId" value="actualFlight" />
+		<property name="flightService" ref="flightService" />
+		<property name="airportService" ref="airportService" />
+	</bean>
+
+
+	<bean id="actualFlightDetailsTaskController"
+		class="com.deniz.flightinformation.services.actualflight.tasks.ActualFlightDetailsTaskController">
+		<property name="methodNameResolver" ref="methodNameResolver" />
+		<property name="processId" value="actualFlight" />
+		<property name="flightService" ref="flightService" />
+	</bean>
+
+	<bean id="actualFlightLoadTaskController"
+		class="com.deniz.flightinformation.services.actualflight.tasks.ActualFlightOverviewTaskController">
+		<property name="methodNameResolver" ref="methodNameResolver" />
+		<property name="processId" value="actualFlight" />
+	</bean>
+
+	<bean id="actualFlightDelaysTaskController"
+		class="com.deniz.flightinformation.services.actualflight.tasks.ActualFlightOverviewTaskController">
+		<property name="methodNameResolver" ref="methodNameResolver" />
+		<property name="processId" value="actualFlight" />
+	</bean>
+
+</beans>

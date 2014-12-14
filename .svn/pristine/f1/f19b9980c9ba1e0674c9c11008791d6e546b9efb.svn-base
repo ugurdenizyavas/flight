@@ -1,0 +1,15 @@
+{
+	"id": "cos.templates",
+	"type": "template",
+	"path": "templates",
+	"items": 
+	[
+		{ "type":"html",	"index": "airline",		           			    "file": "html/airline.html"},
+		{ "type":"html",	"index": "model",		           			    "file": "html/model.html"},
+		{ "type":"html",	"index": "airport",		           			    "file": "html/airport.html"},
+		{ "type":"html",	"index": "scf",		           			    	"file": "html/scf.html"},
+		{ "type":"html",	"index": "actualFlight",		           			    "file": "html/actualFlight.html"},
+		{ "type":"html",	"index": "periodicFlight",		           			    "file": "html/periodicFlight.html"},
+		{ "type":"html",	"index": "news",           						"file": "html/news.html" }
+	]
+}

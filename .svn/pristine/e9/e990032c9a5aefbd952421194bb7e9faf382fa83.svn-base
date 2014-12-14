@@ -1,0 +1,14 @@
+package tester;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+
+public class TestFlight
+{
+	@Test
+	public void testGetAllFlights()
+	{
+		Assert.assertEquals( true, true );
+	}
+}

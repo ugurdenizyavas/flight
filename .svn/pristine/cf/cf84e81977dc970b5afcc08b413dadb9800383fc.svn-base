@@ -1,0 +1,65 @@
+{
+   "type":"process",
+   "id":"model",
+   "items":[
+      {
+         "id":"details",
+         "label":"Details",
+         "selected":true,
+         "type":"task",
+         "mode":"init",
+         "services":[
+            {
+               "id":"save",
+               "label":"Save",
+               "url":"model/init",
+               "parameters":[
+                  {
+                     "id":"*"
+                  }
+               ]
+            }
+         ],
+         "items":[
+            {
+               "type":"time",
+               "id":"effective",
+               "label":"Effective",
+               "format":"date",
+               "value":"28.09.10"
+            },
+            {
+               "type":"time",
+               "id":"discontinue",
+               "label":"Discontinue",
+               "format":"date",
+               "value":"28.10.10"
+            },
+            {
+               "type":"text",
+               "id":"iataCode",
+               "label":"IATA Code",
+               "required":true
+            },
+            {
+               "type":"text",
+               "id":"mtow",
+               "label":"MTOW",
+               "value":"65"
+            },
+            {
+               "type":"text",
+               "id":"seatCapacity",
+               "label":"Seat Capacity",
+               "value":"320"
+            },
+            {
+               "type":"text",
+               "id":"sortingWeight",
+               "label":"Sorting Weight",
+               "value":""
+            }
+         ]
+      }
+   ]
+}

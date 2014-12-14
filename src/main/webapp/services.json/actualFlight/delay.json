@@ -1,0 +1,34 @@
+{
+   "type":"process",
+   "id":"flight",
+   "items":[
+      {
+         "id":"delay",
+         "label":"Delays",
+         "selected":true,
+         "type":"task",
+         "mode":"init",
+         "services":[
+            {
+               "id":"load",
+               "label":"Loads",
+               "url":"flight/load",
+               "parameters":[
+                  {
+                     "id":"*"
+                  }
+               ]
+            }
+         ],
+         "items":[
+            {
+               "type":"text",
+               "id":"delay",
+               "label":"Load",
+               "value":"337",
+               "locked": true
+            }
+         ]
+      }
+   ]
+}

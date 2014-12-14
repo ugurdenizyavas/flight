@@ -1,0 +1,101 @@
+<div>
+<!-- # BO MODAL EDIT USER # -->
+<div class="modal isModal" id="editPerson">
+				<div class="tableWrapper">
+
+				<table class="gridTable">
+					<tr>
+						<td class="col1">
+							<label>Username</label>
+							<div class="wrap">
+								<input id="username" />
+							</div>
+						</td>
+					</tr>
+				</table>
+
+				<table class="gridTable">
+					<tr>
+						<td class="col3 nopad">
+
+				<table class="gridTable">
+					<tr>
+						<td class="col2">
+							<label>Salutation</label>
+							<div class="wrap isSelect" id="salutation"></div>
+						</td>
+						<td class="col2">
+							<label>Title</label>
+							<div class="wrap">
+								<input id="title" />
+							</div>
+						</td>
+					</tr>
+				</table>
+
+					</td>
+						<td class="col3">
+							<label>Firstname</label>
+							<div class="wrap">
+								<input id="firstname" />
+							</div>
+						</td>
+						<td class="col3">
+							<label>Lastname</label>
+							<div class="wrap">
+								<input id="lastname" />
+							</div>
+						</td>
+					</tr>
+				</table>
+
+				<table class="gridTable">
+					<tr>
+						<td class="col3">
+							<label>Email</label>
+							<div class="wrap">
+								<input id="email" />
+							</div>
+						</td>
+						<td class="col3">
+							<label>Phone</label>
+							<div class="wrap">
+								<input id="phone" />
+							</div>
+						</td>
+						<td class="col3">
+							<label>Fax</label>
+							<div class="wrap">
+								<input id="fax" />
+							</div>
+						</td>
+					</tr>
+				</table>
+
+				<table class="gridTable">
+					<tr>
+						<td class="col2">
+							<label>Airline</label>
+							<div class="wrap isSelect" id="airline"></div>
+						</td>
+						<td class="col2">
+							<label>Department</label>
+							<div class="wrap isSelect" id="department"></div>
+						</td>
+					</tr>
+				</table>
+
+				</div>
+
+		<div class="tabfooter">
+			<div class="inner">
+				<div class="buttons" id="actions"></div>
+				<div id="servicestatus"></div>
+			</div>
+		</div><!-- /tabfooter -->
+
+</div><!-- /modal -->
+<!-- # EO MODAL EDIT USER # -->
+
+
+</div>

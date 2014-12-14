@@ -1,0 +1,78 @@
+{
+    "id":"cos.menu",
+    "type":"menu",
+    "link":"index.html",
+    "label":"New Ikarus",
+    "items":[
+        {
+            "id":"menu.scf",
+            "label":"SCF",
+            "services":[
+                {
+                    "url":"scf/init"
+                }
+            ]
+        },
+        {
+            "id":"menu.flight",
+            "label":"Flights",
+		    "items":[
+		        {
+		        	"id": "periodicFlight",
+		        	"label": "Periodic Flight",
+		            "services":[
+		                {
+	                    	"url":"periodicFlight/init"
+	                    }
+                    ]
+                },
+		        {
+		        	"id": "actualFlight",
+		        	"label": "Actual Flight",
+		            "services":[
+		                {
+	                    	"url":"actualFlight/init"
+	                    }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"menu.invoices",
+            "label":"Invoices",
+            "services":[
+                {
+                    "url":"invoice/init"
+                }
+            ],
+            "locked":true
+        },
+        {
+            "id":"menu.airline",
+            "label":"Airline Definition",
+            "services":[
+                {
+                    "url":"airline/init"
+                }
+            ]
+        },
+        {
+            "id":"menu.model",
+            "label":"AC Model Definition",
+            "services":[
+                {
+                    "url":"model/init"
+                }
+            ]
+        },
+        {
+            "id":"menu.airport",
+            "label":"Airport Definition",
+            "services":[
+                {
+                    "url":"airport/init"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+   "type":"process",
+   "id":"actualFlight",
+   "label":"Actual Flight",
+   "mode":"init",
+   "url":"actualFlight/init",
+   "items":[
+      {
+         "id":"overview",
+         "label":"Overview",
+         "selected":true,
+         "type":"task",
+         "mode":"init",
+         "items":[
+            {
+               "type":"time",
+               "id":"date",
+               "label":"Date",
+               "format":"date",
+               "value":"19.04.2013"
+            },
+            {
+				"type":"list",
+				"id":"airportList",
+				"label":"Airport",
+				"format":"text",
+				"items": [
+				    {
+				        "label": "Please Select",
+				        "value": "*"
+				    },
+				    {
+				        "label": "IST",
+				        "value": "IST"
+				    },
+				    {
+				        "label": "AYT",
+				        "value": "AYT"
+				    }
+				]
+            },
+            {
+               "type":"table",
+               "id":"groupsTable",
+               "mode":"init",
+               "checked":"multiple",
+               "columns":[
+                  {
+                     "type":"key",
+                     "hidden":true,
+                     "id":"contentId"
+                  },
+                  {
+                     "type":"text",
+                     "id":"actualFlightNo",
+                     "label":"Actual Flight No"
+                  },
+                  {
+                     "type":"text",
+                     "id":"origin",
+                     "label":"Origin"
+                  },
+                  {
+                     "type":"text",
+                     "id":"via",
+                     "label":"Via"
+                  },
+                  {
+                     "type":"text",
+                     "id":"destination",
+                     "label":"Destination"
+                  },
+                  {
+                     "type":"text",
+                     "id":"stad",
+                     "label":"STAD"
+                  },
+                  {
+                     "type":"text",
+                     "id":"remark",
+                     "label":"Remark"
+                  }
+               ],
+               "rows":[
+                  [
+                     "HL0000107.1",
+                     "TK 7612",
+                     "IST",
+                     "ADB",
+                     "ERZ",
+                     "19.04.2013 15:30",
+                     "Departed"
+                  ],
+                  [
+                     "HL0000107.2",
+                     "LH 2345",
+                     "IST",
+                     "",
+                     "AMS",
+                     "19.04.2013 14:14",
+                     "Delayed"
+                  ]
+               ],
+               "services":[
+                  {
+                     "id":"edit",
+                     "label":"edit",
+                     "trigger":"select",
+                     "url":"actualFlight/edit",
+                     "parameters":[
+                        {
+                           "id":"*"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "type":"task",
+         "id":"details",
+         "label":"Details",
+         "locked":true
+      },
+      {
+         "type":"task",
+         "id":"load",
+         "label":"Load",
+         "locked":true
+      },
+      {
+         "type":"task",
+         "id":"delays",
+         "label":"Delays",
+         "locked":true
+      }
+   ]
+}

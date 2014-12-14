@@ -1,0 +1,42 @@
+{
+   "type":"process",
+   "id":"flight",
+   "items":[
+      {
+         "id":"load",
+         "label":"Loads",
+         "selected":true,
+         "type":"task",
+         "mode":"init",
+         "services":[
+            {
+               "id":"delay",
+               "label":"Delays",
+               "url":"flight/delay",
+               "parameters":[
+                  {
+                     "id":"*"
+                  }
+               ],
+               "locked": true
+            }
+         ],
+         "items":[
+            {
+               "type":"text",
+               "id":"load",
+               "label":"Load",
+               "value":"337",
+               "locked": true
+            },
+            {
+               "type":"text",
+               "id":"pax",
+               "label":"Pax",
+               "value":"72",
+               "locked": true
+            }
+         ]
+      }
+   ]
+}

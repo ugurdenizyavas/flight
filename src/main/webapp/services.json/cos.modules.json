@@ -1,0 +1,16 @@
+{
+   "id":"cos.modules",
+   "label":"Modules",
+   "type":"modules",
+   "items":[
+      {
+         "label":"PHOENIX",
+         "link":"index.html",
+         "selected":true
+      },
+      {
+         "label":"EFORMS",
+         "link":"index.html"
+      }
+   ]
+}

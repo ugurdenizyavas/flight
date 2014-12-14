@@ -1,0 +1,31 @@
+{
+   "type": "process",
+   "id": "ozgen",
+   "label": "Ozgen",
+   "mode": "init",
+   "url": "ozgen/init",
+   "items":[
+	  {
+		"type": "task",
+		"id": "isim",
+		"label": "Ozgen",
+		"mode": "init",
+		"selected": true, 	
+        "items": [
+            {
+                "type":"time",
+                "id":"validity",
+                "label": "Effective",
+                "format": "date",
+                "value":"28.09.10"
+            }
+        ]
+      },
+	  {
+		"type": "task",
+		"id": "edit",
+		"label": "Yavas",
+		"mode": "init"
+      }
+   ]
+}
